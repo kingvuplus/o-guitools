@@ -357,7 +357,7 @@ def InitUsageConfig():
      ('9000', '9 ' + _('seconds')),
      ('10000', '10 ' + _('seconds')),
      ('noscrolling', _('off'))])
-    config.usage.scroll_label_speed = ConfigSelection(default='300', choices=[('500', _('slow')),
+    config.usage.scroll_label_speed = ConfigSelection(default='100', choices=[('500', _('slow')),
      ('300', _('normal')),
      ('200', _('medium')),
      ('100', _('fast')),
