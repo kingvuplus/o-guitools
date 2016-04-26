@@ -37,9 +37,9 @@ def checkkernel():
         return 1
     if getMachineBuild() in ('7000s', '7100s', '7400s', 'g300', 'hd2400', 'vusolo4k', 'wetekplay'):
         return 1
-    if os.path.isfile('/proc/stb/info/vumodel') and os.path.isfile('/proc/stb/info/version'):
-        if open('/proc/stb/info/vumodel').read().startswith('uno') or open('/proc/stb/info/vumodel').read().strip() == 'duo' or open('/proc/stb/info/vumodel').read().startswith('solo') or open('/proc/stb/info/vumodel').read().startswith('ultimo') or open('/proc/stb/info/vumodel').read().startswith('solo2') or open('/proc/stb/info/vumodel').read().startswith('duo2'):
-            if about.getKernelVersionString() == '3.13.5' or about.getKernelVersionString() == '3.9.6':
+    if os.path.isfile('/proc/stb/info/boxtype') and os.path.isfile('/proc/stb/info/version'):
+        if open('/proc/stb/info/boxtype').read().startswith('spark'):
+            if about.getKernelVersionString() == '2.6.32':
                 mycheck = 1
     else:
         mycheck = 0
